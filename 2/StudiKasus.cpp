@@ -61,15 +61,15 @@ class toko{
         void potongan(){
             if(harga2>25000 && harga2<50000){
                 ongkir-=3000;
-                cout<<"Total = "<<harga2+ongkir<<endl;
+                struk();
             }else if(harga2>50000 && harga2<150000){
                 ongkir-=5000;
                 diskon=harga2*0.15;
-                cout<<"Total = "<<harga2+ongkir<<endl;
+                struk();
             }else{
                 ongkir-=8000;
                 diskon=harga2*0.35;
-                cout<<"Total = "<<harga2+ongkir<<endl;
+                struk();
             }
         }
 
