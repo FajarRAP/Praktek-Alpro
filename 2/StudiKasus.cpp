@@ -24,26 +24,27 @@ class toko{
                 case 2:
                     harga=17000;
                     cout<<"Pcs : ";
-                    harga2=pcs*harga;
+                   
                     cin>>pcs;
+                    harga2=pcs*harga;
                     break;
                 case 3:
                     harga=19000;
                     cout<<"Pcs : ";
-                    harga2=pcs*harga;
                     cin>>pcs;
+                     harga2=pcs*harga;
                     break;
                 case 4:
                     harga=20000;
                     cout<<"Pcs : ";
-                    harga2=pcs*harga;
                     cin>>pcs;
+                    harga2=pcs*harga;
                     break;
                 case 5:
                     harga=25000;
                     cout<<"Pcs : ";
-                    harga2=pcs*harga;
                     cin>>pcs;
+                    harga2=pcs*harga;
                     break;              
                 default:
                     cout<<"Menu tidak tersedia";
