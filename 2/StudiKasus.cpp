@@ -65,10 +65,12 @@ class toko{
             }else if(harga2>50000 && harga2<150000){
                 ongkir-=5000;
                 diskon=harga2*0.15;
+                harga2-=diskon;
                 struk();
             }else{
                 ongkir-=8000;
                 diskon=harga2*0.35;
+                harga2-=diskon;
                 struk();
             }
         }
@@ -88,27 +90,27 @@ class toko{
                 case 1:
                     cout<<"Ayam Geprek\tx"<<pcs<<"\tRp. "<<harga2<<endl;
                     cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
                     break;
                 case 2:
                     cout<<"Ayam Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
                     cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
                     break;
                 case 3:
                     cout<<"udang Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
                     cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
                     break;
                 case 4:
                     cout<<"cumi Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
                     cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
                     break;
                 case 5:
                     cout<<"Ayam Bakar\tx"<<pcs<<"\tRp. "<<harga2<<endl;
                     cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
                     break;
                 deafult:
                     cout<<"Menu Tidak Tersedia"<<endl;
