@@ -20,14 +20,12 @@ class toko{
                     cout<<"Pcs : ";
                     cin>>pcs;
                     harga2=pcs*harga;
-
                     break;
                 case 2:
                     harga=17000;
-                    cout<<"Pcs : ";
+                    cout<<"Pcs : ";                
                     cin>>pcs;
                     harga2=pcs*harga;
-                    cout<<harga2<<endl;
                     break;
                 case 3:
                     harga=19000;
@@ -66,18 +64,17 @@ class toko{
             }else if(harga2>50000 && harga2<150000){
                 ongkir-=5000;
                 diskon=harga2*0.15;
-                harga-=diskon;
+                harga2-=diskon;
                 struk();
             }else{
                 ongkir-=8000;
                 diskon=harga2*0.35;
                 harga2-=diskon;
                 struk();
-                
             }
         }
 
-        void titit(){
+        void hitungongkir(){
             if(distance()<3){
                 ongkir=15000;
                 potongan();
@@ -116,15 +113,18 @@ class toko{
                     break;
                 default:
                     cout<<"Menu tidak tersedia"<<endl;
+
             }
         }
 };
 
+       
+                    
 int main(){
     toko kelontong;
     system("cls");
     kelontong.menu();
     kelontong.kasusmenu();
-    kelontong.titit();
+    kelontong.hitungongkir();
     return 0;
 }
