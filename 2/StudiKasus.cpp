@@ -72,7 +72,7 @@ class toko{
             }
         }
 
-        void titit(){
+        void hitungongkir(){
             if(distance()<3){
                 ongkir=15000;
                 potongan();
@@ -81,13 +81,47 @@ class toko{
                 potongan();
             }
         }
+    
+        void struk(){
+            switch(pilih){
+                case 1:
+                    cout<<"Ayam Geprek\tx"<<pcs<<"\tRp. "<<harga2<<endl;
+                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
+                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    break;
+                case 2:
+                    cout<<"Ayam Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
+                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
+                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    break;
+                case 3:
+                    cout<<"udang Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
+                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
+                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    break;
+                case 4:
+                    cout<<"cumi Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
+                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
+                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    break;
+                case 5:
+                    cout<<"Ayam Bakar\tx"<<pcs<<"\tRp. "<<harga2<<endl;
+                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
+                    cout<<"Total\t\tRp. "<<harga2+ongkir<<endl;
+                    break;
+                deafult:
+                    cout<<"Menu Tidak Tersedia"<<endl;
+            }
+        }
 };
 
+       
+                    
 int main(){
     toko kelontong;
     system("cls");
     kelontong.menu();
     kelontong.kasusmenu();
-    kelontong.titit();
+    kelontong.hitungongkir();
     return 0;
 }
