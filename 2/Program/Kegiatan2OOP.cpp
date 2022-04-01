@@ -65,6 +65,26 @@ void konversi::membilang1(){
     }
 }
 
+void konversi::membilang2(){
+    if(bilangan>11){
+        bilangan%=10;
+        membilang1();
+        cout<<" belas";
+    }
+}
+
+void konversi::membilang3(){
+    int satuan;
+    if(bilangan>19){
+        satuan=bilangan%10;
+        bilangan/=10;
+        konversikan();
+        cout<<" Puluh ";
+        bilangan=satuan;
+        konversikan();
+    }
+}
+
 void konversi::konversikan(){
     if(bilangan<11){
         membilang1();
