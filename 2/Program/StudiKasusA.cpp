@@ -1,12 +1,16 @@
 #include<iostream>
 using namespace std;
 
-// bug : jika salah satu pekerjaan pengalamannya <2.5 thn
+/* 
+bug : jika salah satu pekerjaan pengalamannya <2.5 thn
+fitur yg belum : - 2 kerjaan dipotong 9% (added)
+                 - tim leader bonus 6%
+*/                  
 
 class gaji{
     public:
     string nama;
-    float pengalaman, gajitotal, gaji, bonus;
+    float pengalaman, gajitotal, gaji, bonus, potongan;
     int pilih, jawab, tanda=0;
 
     int bidang(){
@@ -44,17 +48,31 @@ class gaji{
                     break;
                 }
             }
-
             switch(jawab){
                 case 2:
-                    cout<<"Gajimu = Rp. "<<gajitotal<<" Juta"<<endl;
+                    potongan=gajitotal*0.18;
+                    cout<<"Gajimu = Rp. "<<gajitotal-potongan<<" Juta"<<endl;
+                    break;
+                default:
+                    cout<<"Pilihan tidak tersedia"<<endl;                        
+            }
+        }else{
+            if(tanda==2){
+                switch(jawab){
+                case 1:
+                    system("cls");
+                    bidang();
+                    pilihan();
+                    break;
+                case 2:
+                    potongan=gajitotal*0.18;
+                    cout<<"Gajimu = Rp. "<<gajitotal-potongan<<" Juta"<<endl;
                     break;
                 default:
                     cout<<"Pilihan tidak tersedia"<<endl;
-                        
-            }
-        }else{
-            switch(jawab){
+                }
+            }else{
+                switch(jawab){
                 case 1:
                     system("cls");
                     bidang();
@@ -65,9 +83,12 @@ class gaji{
                     break;
                 default:
                     cout<<"Pilihan tidak tersedia"<<endl;
+                }
             }
+            
         } 
     }
+
     void seleksi_pengalaman(){
         if(pengalaman>4){
             bonus=gaji*0.4;
@@ -83,6 +104,7 @@ class gaji{
             cout<<"Gajimu = Rp. "<<gaji<<" Juta"<<endl;
         }
     }
+
     void pilihan(){
         switch(pilih){
             case 1:
@@ -95,7 +117,26 @@ class gaji{
                 experience();
                 seleksi_pengalaman();
                 break;
-            
+            case 3:
+                gaji=8;
+                experience();
+                seleksi_pengalaman();
+                break;
+            case 4:
+                gaji=18;
+                experience();
+                seleksi_pengalaman();
+                break;
+            case 5:
+                gaji=8;
+                experience();
+                seleksi_pengalaman();
+                break;
+            case 6:
+                gaji=15;
+                experience();
+                seleksi_pengalaman();
+                break;   
         }
     }
 };
