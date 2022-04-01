@@ -3,7 +3,6 @@
 using namespace std;
 
 class konversi{
-        friend ostream& operator<<(ostream&, const konversi&);
         friend istream& operator>>(istream&, konversi&);
     public:
         konversi(unsigned int b=0){
@@ -64,6 +63,7 @@ void konversi::membilang(){
 }
 
 int main(){
+    system("cls");
     konversi x;
     cin>>x;
     x.membilang();
