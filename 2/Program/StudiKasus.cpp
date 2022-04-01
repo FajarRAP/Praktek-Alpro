@@ -3,6 +3,7 @@ using namespace std;
 
 class toko{
     public:
+        string kata;
         int harga=0, harga2, pcs, pilih, jarak, ongkir, diskon=0;
 
         void menu(){
@@ -58,18 +59,19 @@ class toko{
         }
 
         void potongan(){
+            system("cls");
             if(harga2>25000 && harga2<50000){
                 ongkir-=3000;
                 struk();
             }else if(harga2>50000 && harga2<150000){
                 ongkir-=5000;
                 diskon=harga2*0.15;
-                harga2-=diskon;
+                kata="15%";
                 struk();
             }else{
                 ongkir-=8000;
                 diskon=harga2*0.35;
-                harga2-=diskon;
+                kata="35%";
                 struk();
             }
         }
@@ -88,33 +90,34 @@ class toko{
             switch(pilih){
                 case 1:
                     cout<<"Ayam Geprek\tx"<<pcs<<"\tRp. "<<harga2<<endl;
-                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
+                    struk2();
                     break;
                 case 2:
-                    cout<<"Ayam Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
-                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Ayam Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;                    
+                    struk2();
                     break;
                 case 3:
-                    cout<<"Udang Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
-                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Udang Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;                    
+                    struk2();
                     break;
                 case 4:
-                    cout<<"Cumi Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;
-                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Cumi Goreng\tx"<<pcs<<"\tRp. "<<harga2<<endl;                    
+                    struk2();
                     break;
                 case 5:
-                    cout<<"Ayam Bakar\tx"<<pcs<<"\tRp. "<<harga2<<endl;
-                    cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
-                    cout<<"Total\t\t\tRp. "<<harga2+ongkir<<endl;
+                    cout<<"Ayam Bakar\tx"<<pcs<<"\tRp. "<<harga2<<endl;                    
+                    struk2();
                     break;
                 default:
                     cout<<"Menu tidak tersedia"<<endl;
 
             }
+        }
+
+        void struk2(){
+            cout<<"Ongkir\t\t\tRp. "<<ongkir<<endl;
+            cout<<"Diskon\t\t\t"<<kata<<endl;
+            cout<<"Total\t\t\tRp. "<<harga2-diskon+ongkir<<endl;
         }
 };
 
@@ -125,6 +128,7 @@ int main(){
     system("cls");
     kelontong.menu();
     kelontong.kasusmenu();
+    system("cls");
     kelontong.hitungongkir();
     return 0;
 }
