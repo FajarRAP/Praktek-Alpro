@@ -5,6 +5,7 @@ using namespace std;
 bug : jika salah satu pekerjaan pengalamannya <2.5 thn
 fitur yg belum : - 2 kerjaan dipotong 9% (added)
                  - tim leader bonus 6%
+                 - slip gaji
 */                  
 
 class gaji{
