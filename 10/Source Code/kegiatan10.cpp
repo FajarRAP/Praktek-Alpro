@@ -6,7 +6,6 @@ struct Node{
     Node *berikut;
 };
 
-
 int main(){
     //langkah pertama
     Node *baru;
